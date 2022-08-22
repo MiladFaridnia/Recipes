@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-android-extensions'
     id "androidx.navigation.safeargs.kotlin"
     id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
 //    apply plugin: 'kotlin-android'
 }
 
@@ -114,5 +115,11 @@ dependencies {
 
     // Jsoup
     implementation 'org.jsoup:jsoup:1.13.1'
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:30.3.2')
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
 
 }

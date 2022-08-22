@@ -2,21 +2,36 @@
 
 buildscript {
 
+    repositories {
+        google()  // Google's Maven repository
+        mavenCentral()  // Maven Central repository
+        maven { url 'https://jitpack.io' }
+    }
+
     dependencies {
-        classpath("com.android.tools.build:gradle:7.0.4")
+        classpath('com.android.tools.build:gradle:7.2.2')
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.5.1"
         classpath "com.google.dagger:hilt-android-gradle-plugin:2.40.1"
+        classpath 'com.google.gms:google-services:4.3.13'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
-plugins {
-    id 'com.android.application' version '7.2.0' apply false
-    id 'com.android.library' version '7.2.0' apply false
-    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+//plugins {
+//    id 'com.android.application' //version '7.2.0' apply false
+//    id 'com.android.library' version '7.2.0' apply false
+//    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+//}
+
+allprojects {
+    repositories {
+        google()  // Google's Maven repository
+        mavenCentral()  // Maven Central repository
+        maven { url 'https://jitpack.io' }
+    }
 }
 
 
